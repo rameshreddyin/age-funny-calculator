@@ -36,28 +36,30 @@ const AgeCalculator: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4">
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-2">
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="mb-8 md:mb-12 text-center px-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tight">
           Company Age Calculator
         </h1>
-        <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+        <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
           Discover how old your favorite tech companies and apps are, with interesting facts.
         </p>
       </div>
 
       {!selectedCompany ? (
-        <CompanySearch onSelect={handleCompanySelect} />
+        <div className="px-3 md:px-0">
+          <CompanySearch onSelect={handleCompanySelect} />
+        </div>
       ) : (
         <>
           {ageData && <AgeResult company={selectedCompany} age={ageData} />}
           
           <AgeFacts facts={facts} />
           
-          <div className="mt-8 text-center">
+          <div className="mt-8 md:mt-10 text-center pb-4">
             <button
               onClick={resetSelection}
-              className="text-sm text-muted-foreground hover:text-primary underline transition-colors"
+              className="px-4 py-2 text-sm md:text-base text-primary border border-primary/20 rounded-full hover:bg-primary/5 transition-colors"
             >
               Search for another company
             </button>

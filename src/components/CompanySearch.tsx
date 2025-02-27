@@ -63,7 +63,7 @@ const CompanySearch: React.FC<CompanySearchProps> = ({ onSelect }) => {
           ref={inputRef}
           type="text"
           placeholder="Search for a company..."
-          className="pr-10 h-14 text-lg rounded-xl border-2 shadow-sm transition-all duration-200 focus-visible:border-primary/50"
+          className="pr-10 h-14 text-base md:text-lg rounded-xl border-2 shadow-sm transition-all duration-200 focus-visible:border-primary/50 px-4"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onFocus={() => setIsFocused(true)}
@@ -86,14 +86,14 @@ const CompanySearch: React.FC<CompanySearchProps> = ({ onSelect }) => {
           {suggestions.map((company) => (
             <div
               key={company.name}
-              className="p-3 cursor-pointer hover:bg-accent transition-colors flex items-center justify-between group"
+              className="p-4 cursor-pointer hover:bg-accent transition-colors flex items-center justify-between group"
               onClick={() => handleSuggestionClick(company)}
             >
               <div>
                 <p className="font-medium">{company.name}</p>
                 <p className="text-sm text-muted-foreground">{company.category}</p>
               </div>
-              <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                 Select
               </span>
             </div>

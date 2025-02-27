@@ -33,29 +33,29 @@ const AgeResult: React.FC<AgeResultProps> = ({ company, age }) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto mt-8 text-center animate-fade-in">
-      <div className="glass-morphism rounded-2xl border shadow-sm p-6 mb-6">
+    <div className="w-full max-w-md mx-auto mt-8 text-center animate-fade-in px-4 sm:px-0">
+      <div className="glass-morphism rounded-2xl border shadow-md p-6 sm:p-8 mb-6">
         <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
           {company.category}
         </div>
-        <h2 className="text-3xl font-bold mb-4">{company.name}</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">{company.name}</h2>
         
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-5">
           <div className="flex items-center text-sm text-muted-foreground">
-            <CalendarDays className="h-4 w-4 mr-1" />
+            <CalendarDays className="h-4 w-4 mr-2" />
             <span>Founded: {format(new Date(company.launchDate), "MMMM d, yyyy")}</span>
           </div>
         </div>
         
-        <div className="flex items-center justify-center mb-4">
-          <ProgressRing progress={calculateProgress()} size={160} />
+        <div className="flex items-center justify-center mb-6">
+          <ProgressRing progress={calculateProgress()} size={150} />
         </div>
         
-        <div className="text-center mb-4">
-          <div className="text-sm uppercase tracking-wider text-muted-foreground mb-1">
+        <div className="text-center mb-5">
+          <div className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
             Current Age
           </div>
-          <div className="text-3xl font-bold">
+          <div className="text-2xl sm:text-3xl font-bold">
             {formatAgeString(age)}
           </div>
         </div>

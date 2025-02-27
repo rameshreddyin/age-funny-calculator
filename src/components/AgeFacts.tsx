@@ -34,18 +34,18 @@ const AgeFacts: React.FC<AgeFactsProps> = ({ facts }) => {
   if (!facts.length) return null;
 
   return (
-    <div className="w-full max-w-3xl mx-auto mt-8 grid gap-4 md:grid-cols-2">
+    <div className="w-full max-w-3xl mx-auto mt-8 grid gap-4 px-4 sm:px-6 md:px-4">
       {facts.map((fact, index) => (
         <Card 
           key={index} 
           className="overflow-hidden backdrop-blur-sm bg-card/90 border hover:shadow-md transition-all duration-300 animate-fade-in"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <CardContent className="p-5">
-            <div className="flex gap-3">
+          <CardContent className="p-5 sm:p-6">
+            <div className="flex gap-4">
               <div className="mt-1 shrink-0">{getCategoryIcon(fact.category)}</div>
               <div className="flex-1">
-                <p className="text-xs font-medium text-muted-foreground mb-1">
+                <p className="text-xs font-medium text-muted-foreground mb-1.5">
                   {fact.category}
                 </p>
                 <p className="text-sm md:text-base">{fact.text}</p>
