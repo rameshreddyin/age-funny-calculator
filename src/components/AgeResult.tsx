@@ -33,8 +33,8 @@ const AgeResult: React.FC<AgeResultProps> = ({ company, age }) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto mt-8 text-center animate-fade-in px-4 sm:px-0">
-      <div className="glass-morphism rounded-2xl border shadow-md p-6 sm:p-8 mb-6">
+    <div className="w-full text-center animate-fade-in px-4 sm:px-0 md:px-2 mb-8 md:mb-0">
+      <div className="glass-morphism rounded-2xl border shadow-md p-6 sm:p-8 md:sticky md:top-4">
         <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
           {company.category}
         </div>
