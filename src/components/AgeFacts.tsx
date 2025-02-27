@@ -34,7 +34,7 @@ const AgeFacts: React.FC<AgeFactsProps> = ({ facts }) => {
   if (!facts.length) return null;
 
   return (
-    <div className="w-full mt-8 md:mt-0 grid gap-4 px-4 sm:px-6 md:px-4 md:grid-cols-1 lg:grid-cols-2">
+    <div className="w-full grid gap-4 px-4 sm:px-6 md:px-0 grid-cols-1 md:grid-cols-2">
       {facts.map((fact, index) => (
         <Card 
           key={index} 

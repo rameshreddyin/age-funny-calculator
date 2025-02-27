@@ -51,15 +51,13 @@ const AgeCalculator: React.FC = () => {
           <CompanySearch onSelect={handleCompanySelect} />
         </div>
       ) : (
-        <div className="md:grid md:grid-cols-12 md:gap-8 w-full">
-          <div className="md:col-span-4 lg:col-span-3">
+        <div className="w-full">
+          <div className="max-w-xl mx-auto md:max-w-3xl lg:max-w-4xl">
             {ageData && <AgeResult company={selectedCompany} age={ageData} />}
-          </div>
-          <div className="md:col-span-8 lg:col-span-9">
             <AgeFacts facts={facts} />
           </div>
           
-          <div className="md:col-span-12 mt-8 md:mt-10 text-center pb-4">
+          <div className="mt-8 md:mt-10 text-center pb-4">
             <button
               onClick={resetSelection}
               className="px-4 py-2 text-sm md:text-base text-primary border border-primary/20 rounded-full hover:bg-primary/5 transition-colors"
