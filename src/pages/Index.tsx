@@ -10,10 +10,20 @@ const Index: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="text-xl md:text-2xl font-semibold">CompanyAge</div>
             <nav className="hidden md:flex space-x-4">
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="https://techpp.com/about/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 About
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="https://techpp.com/contact/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Contact
               </a>
             </nav>
@@ -28,7 +38,7 @@ const Index: React.FC = () => {
       <footer className="py-5 md:py-6 border-t px-4 md:px-8">
         <div className="container mx-auto max-w-full">
           <div className="text-center text-xs md:text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} CompanyAge Calculator. All company information is for entertainment purposes only.</p>
+            <p>© {new Date().getFullYear()} CompanyAge Calculator by <a href="https://techpp.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Techpp</a>. All company information is for entertainment purposes only.</p>
           </div>
         </div>
       </footer>
